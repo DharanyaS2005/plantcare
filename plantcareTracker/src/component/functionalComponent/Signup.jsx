@@ -15,7 +15,7 @@ const Signup=()=>{
     
     try{
       console.log("Event Trigger");
-      const req = await axios.post("https://memegenerator-um4l.onrender.com/signup",{
+      const req = await axios.post("http://localhost:5000/signup",{
       firstname: firstname,
       lastname: lastname,
       username: username,

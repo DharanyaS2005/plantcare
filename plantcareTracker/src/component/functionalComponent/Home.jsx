@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
 import "./Home.css";
 
 const plantIssues = [
@@ -29,12 +31,28 @@ const Home = () => {
     );
     setResult(foundIssue ? foundIssue.solution : "No solution found. Try another search.");
   };
+  useEffect(() => {
+    const fetchProtectedData = async () => {
+      const token = localStorage.getItem("token");
+      try {
+        const res = await axios.get("http://localhost:5000/json", {
+          headers: {
+            Authorization: token,
+          },
+        });
+        console.log("Protected data:", res.data);
+        setUser(res.data.user?.username || "User");
+      } catch (err) {
+        console.error("Protected route error", err);
+      }
+    };
 
+    fetchProtectedData();
+  }, []);
   return (
     <div className="container">
        <nav className="nav-bar">
         <div className="nav-content">
-          <div className="nav-title">Meme Generator</div>
           <ol className="nav-list">
             <li>
               <Link to="/home" className="link">

@@ -73,9 +73,8 @@ const Signup=()=>{
           
         <button type="submit">Signup</button>
         </form>
-        <p>
-          Already have account??<Link to="/login">Login</Link>
-        </p>
+        <p className='linkwrap'>
+          <Link to="/login">Already have account</Link></p>
     </div>
     </div>
   );

@@ -4,9 +4,9 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(-6deg, #e91365, #7a0d88);
+  background: url('/loginsignup.jpg') no-repeat center center/cover;
   color: #fff;
-  font-family: cursive;
+  font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 .login-container {
@@ -33,21 +33,12 @@
   width: 100%;
   padding: 10px;
   border-radius: 10px;
-  background: linear-gradient(225deg, #6a11cb, #3e055f);
+  background: linear-gradient(225deg, #11cb39, #1a4727);
   color: white;
   border: none;
   cursor: pointer;
   font-size: 16px;
-  font-family: cursive;
-  transition: background-color 0.3s ease;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  transition: transform 0.3s ease-in-out,background-color 0.3s ease;
 }
 
-.login-container a {
-  color: #3e055f;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.login-container a:hover {
-  text-decoration: underline;
-}

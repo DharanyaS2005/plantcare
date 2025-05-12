@@ -1,28 +1,28 @@
 body {
     background-color: #f0fdf4;
-    font-family: Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   .nav-bar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(-6deg, #e91365, #7a0d88);
+    background: linear-gradient(225deg, #11cb39, #1a4727);
     color: white;
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     height: 45px;
     display: flex;
-    align-items: center;
+    align-items:center;
     justify-content: space-between;
     overflow: hidden;
   }
   
   .nav-content {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content:flex-end;
+    align-items:center;
     width: 100%;
     flex-wrap: wrap;
     margin-right: 60px;
@@ -31,7 +31,7 @@ body {
   .nav-title {
     font-size: 20px;
     font-weight: bold;
-    font-family: cursive;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -60,7 +60,7 @@ body {
   }
   
   .link:hover {
-    color: #030303;
+    color: #1a4727;
   }
   
   .container {
@@ -87,9 +87,11 @@ body {
     border-radius: 8px;
     width: 320px;
     outline: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   
   button {
+    font-size: 15px;
     margin-top: 15px;
     padding: 10px;
     background-color: #16a34a;
@@ -98,6 +100,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   
   button:hover {
@@ -113,4 +116,5 @@ body {
     border-radius: 10px;
     width: 320px;
     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }

@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useEffect } from 'react';
+import ScrollReveal from 'scrollreveal';
+import { Link } from 'react-router-dom';
+
 import "./About.css";
 import plantImage from "../../assets/about.jpg"; 
 
 const About = () => {
+  useEffect(() => {
+    const sr = ScrollReveal({
+      distance: '40px',
+      duration: 2500,
+      reset: true,
+    });
+
+    sr.reveal('.about-content ', { delay: 100, origin: 'right' });
+    sr.reveal('.about-image img', { delay: 100, origin: 'right' });
+
+  }, []);
   return (
     <div className="about-page">
         <nav className="nav-bar">
         <div className="nav-content">
-          <div className="nav-title">Meme Generator</div>
           <ol className="nav-list">
             <li>
               <Link to="/home" className="link">
@@ -28,10 +41,10 @@ const About = () => {
         </div>
       </nav>
       <div className="about-content">
-        <h1>About Plant Care Tracker</h1>
+        <h1>Plant Care Tracker</h1>
         <p>
-          🌿 Plant Care Tracker is your personal assistant for keeping your plants happy and healthy.
-          Simply type in any problem you're noticing — like yellow leaves, brown spots, or wilting —
+          Plant Care Tracker is your personal assistant for keeping your plants happy and healthy.
+          Simply type in any problem you're noticing — like yellow leaves, brown spots, or wilting etc,
           and our smart assistant will guide you with actionable remedies.
         </p>
         <p>
@@ -43,7 +56,7 @@ const About = () => {
         <img src={plantImage} alt="Plant Care" />
       </div>
       <footer className="footer">
-        <p>&copy; 2025 Plant Care Tracker. All rights reserved.</p>
+        <p>&copy; 2025 Plant Care Tracker-By Dharanya.</p>
       </footer>
     </div>
   );

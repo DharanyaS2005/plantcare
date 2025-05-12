@@ -4,29 +4,29 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(-6deg, #e91365, #7a0d88);
+    background: url('/loginsignup.jpg') no-repeat center center/cover;
     color: #fff;
-    font-family: cursive;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   
   .signup-container {
     background-color: white;
     padding: 30px;
-    border-radius: 8px;
+    border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 350px;
+    width: 340px;
   }
   
   .signup-container h2 {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     color: #333;
-    font-size: 24px;
+    font-size: 20px;
   }
   
   .signup-container label {
     display: block;
-    margin-top: 15px;
+    margin-top: 10px;
     text-align: left;
     font-size: 16px;
     color: #333;
@@ -39,29 +39,34 @@
     border-radius: 4px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 13px;
   }
   
   .signup-container button {
     width: 100%;
     padding: 10px;
     border-radius: 10px;
-    background: linear-gradient(225deg, #6a11cb, #3e055f);
+    background: linear-gradient(225deg, #11cb39, #1a4727);
     color: white;
     border: none;
     cursor: pointer;
     font-size: 16px;
-    font-family: cursive;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     transition: background-color 0.3s ease;
   }
-  
-  .signup-container a {
-    color: #3e055f;
-    text-decoration: none;
-    font-size: 18px;
+  .linkwrap{
+    text-align: right;
+    margin-bottom: 0%;
   }
   
-  .signup-container a:hover {
+  .linkwrap a{
+    color: #234d2a;
+    text-align:right;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .linkwrap a:hover {
     text-decoration: underline;
   }
   

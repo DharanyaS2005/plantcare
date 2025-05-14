@@ -6,6 +6,8 @@ import Landing from './component/functionalComponent/Landing';
 import Login from './component/functionalComponent/Login';
 import Signup from './component/functionalComponent/Signup';
 import About from './component/functionalComponent/About';
+import Blog from './component/functionalComponent/Blog';
+import Profile from './component/functionalComponent/Profile';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false); // ✅ Add this
@@ -18,6 +20,8 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog/>} />
+        <Route path="/profile" element={<Profile/>}/>
       </Routes>
     </Router>
   );

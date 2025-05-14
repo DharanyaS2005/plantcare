@@ -60,15 +60,24 @@ const Home = () => {
               </Link>
             </li>
             <li>
+              <Link to="/blog" className="link">
+                Blog
+              </Link>
+            </li>
+            <li>
               <Link to="/about" className="link">
                 About
               </Link>
+            </li>
+            <li>
+              <Link to="/profile" className="link">Profile</Link>
             </li>
             <li>
               <Link to="/" className="link">
                 Logout
               </Link>
             </li>
+
           </ol>
         </div>
       </nav>

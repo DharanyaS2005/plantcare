@@ -18,6 +18,8 @@ const Login = ({ setIsLoggedIn }) => {
 
       alert(res.data.response);
       if (res.data.loginStatus) {
+        localStorage.setItem("username", res.data.username);
+        localStorage.setItem("email", res.data.email); 
         setIsLoggedIn(true);
         navigate("/home");
       } else {

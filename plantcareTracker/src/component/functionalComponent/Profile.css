@@ -1,0 +1,134 @@
+html, body, #root {
+  height: 100%;
+}
+bnav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(225deg, #11cb39, #1a4727);
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.bnav-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-right: 60px;
+}
+
+.bnav-title {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: cursive;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+
+.bnav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 25px;
+  flex-shrink: 0;
+}
+
+.bnav-list li {
+  flex-shrink: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.link:hover {
+  color: #1a4727;
+}
+.profile-container {
+  max-width: 800px;
+  margin: 80px auto 20px;
+  padding: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.profile-card {
+  background: #e8f5e9;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 128, 0, 0.1);
+}
+
+
+.profile-card h2 {
+  color: #2e7d32;
+  margin-bottom: 8px;
+}
+
+.profile-card p {
+  color: #555;
+}
+
+.blog-header {
+  text-align: center;
+  color: #1b5e20;
+  margin: 40px 0 20px;
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blog-card {
+  background-color: #f1f8e9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.15);
+  color: #333;
+}
+
+.no-blogs {
+  text-align: center;
+  color: gray;
+}
+.scrollable-profile {
+  height: calc(100vh - 45px);
+  overflow-y: auto;
+  padding-top: 60px;
+}
+.scrollable-profile::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-profile::-webkit-scrollbar-track {
+  background: #e0f2f1; /* light green background */
+  border-radius: 10px;
+}
+
+.scrollable-profile::-webkit-scrollbar-thumb {
+  background: #2e7d32; /* green thumb */
+  border-radius: 10px;
+}
+
+.scrollable-profile::-webkit-scrollbar-thumb:hover {
+  background: #1a4727; /* darker green on hover */
+}

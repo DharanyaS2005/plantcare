@@ -47,10 +47,67 @@ app.post('/login', async (req, res) => {
       return res.status(401).send({ response: "Incorrect password", loginStatus: false });
     }
 
-    res.status(200).send({ response: "Login successful", loginStatus: true });
+    res.status(200).send({ 
+  response: "Login successful", 
+  loginStatus: true,
+  username: user.username,
+  email: user.email  
+   });
   } catch (err) {
     res.status(500).send({ response: "Login error", loginStatus: false });
   }
+});
+const Blog = require("./models/Blog");
+
+// Get all blogs
+app.get('/blogs', async (req, res) => {
+  try {
+    const blogs = await Blog.find().sort({ createdAt: -1 });
+    res.status(200).json(blogs);
+  } catch (err) {
+    res.status(500).json({ message: "Error fetching blogs" });
+  }
+});
+
+// Post a new blog
+app.post('/blogs', async (req, res) => {
+  const { username, content } = req.body;
+  try {
+    const newBlog = new Blog({ username, content });
+    await newBlog.save();
+    res.status(201).json(newBlog);
+  } catch (err) {
+    res.status(400).json({ message: "Failed to post blog" });
+  }
+});
+
+app.get('/user', async (req, res) => {
+  try {
+    const email = req.query.email;
+    const user = await Signup.findOne({ email });
+
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    // Only send required user info
+    res.json({
+      firstname: user.firstname,
+      lastname: user.lastname,
+      username: user.username,
+      email: user.email
+    });
+  } catch (err) {
+    res.status(500).json({ message: "Error fetching user" });
+  }
+});
+
+
+// Get blogs by username
+app.get('/blogs/user/:username', async (req, res) => {
+  const username = req.params.username;
+  const blogs = await Blog.find({ username });
+  res.json(blogs);
 });
 
 app.listen(5000, () => {
